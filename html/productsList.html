@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品列表页</title>
+		<link rel="stylesheet" href="../css/common.css"/>
+		<link rel="stylesheet" href="../css/different.css" />
+		<link rel="stylesheet" href="../css/liebiao.css" />
+		<script src="../js/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/lunbo.js" ></script>
+		<script type="text/javascript" src="../js/aolaigo.js" ></script>
+		<script type="text/javascript" src="../js/proList.js" ></script>
+	
+	</head>
+	<body>
+		<div class="headerBar">
+			<div class="topBar">
+				<div class="comWidth">
+					<div class="leftArea">
+						<p>华盛奥特莱斯全渠道一体化零售平台</p>
+					</div>
+					<div class="rightArea">
+						<ul>
+							<li><a href="src/html/LonIn.html" class="log">登入</a></li>
+							<li><a href="#" class="registration">免费注册</a></li>
+							<li><a href="#" class="myAlg">我的奥莱购</a>
+								<ul>
+									<li><a href="#" class="myOrder">我的订单</a></li>
+									<li><a href="#" class="lcollection">我的收藏</a></li>
+									<li><a href="#" class="coupons">我的优惠劵</a></li>
+									<li><a href="#" class="goodCart">我的购物车</a></li>
+								</ul>
+							</li>
+							<li><a href="#" class="phone">手机APP</a></li>
+							<li class="listLast"><a href="#" class="help">帮助中心</a></li>
+						</ul>											
+					</div>
+				</div>
+			</div>
+			<!--头部广告-->
+			<div class="hdLogo">
+				<div class="comWidth">
+					<a href="#"><img src="../img/hdLogo.gif" alt="图片"/></a>
+				</div>				
+			</div>
+			<!--LOGO-->
+			<div class="logoBar">
+				<div class="comWidth">
+					<div class="logo fl">
+						<a href="#"><img src="../img/LOGO.jpg" alt="奥莱购"/></a>
+						<a href="#"><img src="../img/logo.gif" alt="奥莱购"/></a>
+					</div>
+					<div class="search_box fl">
+						<div class="search">
+							<input type="text" class="search_text"/>
+							<input type="button" value="搜 索" class="search_btn"/>	
+						</div>						
+						<p>热门搜索：<a href="#">新百伦 </a><a href="#">T恤</a><a href="#">连衣裙</a><a href="#">休闲鞋 </a><a href="#">防晒</a><a href="#">春装</a><a href="#">耐克</a></p>
+					</div>
+					<div class="shop fr">
+						<ul>
+							<li>
+								<img src="../img/icon3.jpg" alt="移动端"/>
+								<p> 移动端</p>
+								<dl>
+									<span><img src="../img/icon6.jpg" alt="安卓" /></span>
+									<dt class="fl"><img src="../img/ewmpic.jpg" alt="二维码" /></dt>
+									<dd class="fl">
+										<p>下载安装奥莱购APP</p>
+										<a href="#"><img src="../img/appccn1.jpg" alt="安卓" /></a>
+										<a href="#"><img src="../img/appccn2.jpg" alt="iphone" /></a>
+										<a href="#"><img src="../img/appccn3.jpg" alt="ipad" /></a>
+									</dd>																																				
+								</dl>
+							</li>
+							<li>
+								<img src="../img/icon4.jpg" alt="京东直营"/>
+								<p>京东直营</p>
+							</li>
+							<li>
+								<img src="../img/icon5.jpg" alt="天猫直营"/>
+								<p>天猫直营</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- nav-->
+			<div class="navBox">
+				<div class="comWidth">
+					<div class="shopClass fl">
+						<h3>全部商品分类</h3>
+						<div class="shopClass_show" style="display: none;">
+							<ul>
+								<li>
+									<dl class="shopClass_item">
+										<em></em>
+										<dt class="shopIcon"><a href="#">奢侈品</a></dt>
+										<dd><a href="#">包袋</a><a href="#">服装</a><a href="#">配饰</a></dd>
+									</dl>
+									<div class="shopClass_cot" >
+										<div class="shopClass_list">
+											<dl>
+												<dt ><a href="#">女装</a></dt>
+												<dd><a href="#">短袖T恤</a><a href="#">长袖T恤</a><a href="#">裙装</a><a href="#">裤装</a><a href="#">针织衫</a><a href="#">外套</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">男装</a></dt>
+												<dd><a href="#">短袖T恤</a><a href="#">长袖T恤</a><a href="#">短袖POLO衫</a><a href="#">短袖衬衫</a><a href="#">长袖衬衫</a><a href="#">针织衫</a><a href="#">外套</a><a href="#">卫衣</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">女士包袋</a></dt>
+												<dd><a href="#">斜挎包</a><a href="#">钱/卡/钥匙包</a><a href="#">单肩包</a><a href="#">手拿包</a><a href="#">手提包</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">男士包袋</a></dt>
+												<dd><a href="#">手提包</a><a href="#">手拿包</a><a href="#">斜挎包</a><a href="#">双肩包</a><a href="#">钱/卡/钥匙包</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">配饰</a></dt>
+												<dd><a href="#">女士皮带</a><a href="#">男士皮带</a><a href="#">围巾/丝巾/披肩</a><a href="#">领带</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">女鞋</a></dt>
+												<dd><a href="#">平底鞋</a><a href="#">高跟鞋</a><a href="#">靴子</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">男鞋</a></dt>
+												<dd><a href="#">休闲鞋</a><a href="#">商务鞋</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">本月特价</a></dt>
+												<dd></dd>
+											</dl>
+										</div>
+										<div class="shopClass_logo">
+											<a href="#"><img src="../img/guccl1.jpg"/></a><a href="#"><img src="../img/burberry4.jpg"/></a><a href="#"><img src="../img/bally.jpg"/></a><a href="#"><img src="../img/goodlog3.jpg"/></a><a href="#"><img src="../img/goodlog4.jpg"/><a href="#"><img src="../img/goodlog5.jpg"/></a>
+										</div>
+									</div>									
+								</li>
+								<li>
+									<dl class="shopClass_vz">
+										<em></em>
+										<dt class="shopIcon"><a href="src/html/liebiao.html">女装</a></dt>
+										<dd><a href="#">T恤</a><a href="#">连衣裙</a><a href="#">休闲裤</a></dd>
+									</dl>
+									<div class="shopClass_cot" >
+										<div class="shopClass_list">
+											<dl>
+												<dt><a href="#">上装</a></dt>
+												<dd><a href="#">衬衫</a><a href="#">T恤</a><a href="#">西服</a><a href="#">卫衣</a><a href="#">背心/吊带</a><a href="#">毛呢大衣</a><a href="#">针织衫/毛衫</a><a href="#">风衣外套</a><a href="#">蕾丝衫</a><a href="#">雪纺衫</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">下装</a></dt>
+												<dd><a href="#">休闲裤</a><a href="#">正装裤</a><a href="#">短裤</a><a href="#">牛仔裤</a><a href="#">打底裤</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">裙装</a></dt>
+												<dd><a href="#">连衣裙</a><a href="#">半身裙</a><a href="#">旗袍</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">套装</a></dt>
+												<dd><a href="#">套装</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">配饰</a></dt>
+												<dd><a href="#">围巾/帽子</a><a href="#">女士手表</a><a href="#">皮带/腰带</a><a href="#">项链/坠链/毛衣链</a><a href="#">手链/手镯</a><a href="#">耳环/耳钉</a><a href="#">戒指</a></dd>
+											</dl>									
+										</div>
+										<div class="shopClass_logo">
+											<a href="#"><img src="../img/goodlog6.jpg"/></a><a href="#"><img src="../img/goodlog7.jpg"/></a><a href="#"><img src="../img/goodlog8.jpg"/></a><a href="#"><img src="../img/goodlog9.jpg"/></a><a href="#"><img src="../img/goodlog10.jpg"/></a><a href="#"><img src="../img/goodlog11.jpg"/></a><a href="#"><img src="../img/goodlog12.jpg"/></a><a href="#"><img src="../img/goodlog13.jpg"/></a><a href="#"><img src="../img/goodlog14.jpg"/></a><a href="#"><img src="../img/goodlog15.jpg"/></a><a href="#"><../img src="../img/goodlog16.jpg"/></a><a href="#"><../img src="../img/goodlog17.jpg"/></a>
+										</div>
+									</div>				
+								</li>
+								<li>
+									<dl class="shopClass_nz">
+										<em></em>
+										<dt class="shopIcon"><a href="#">男装</a></dt>
+										<dd><a href="#">衬衫</a><a href="#">T恤</a><a href="#">休闲裤</a></dd>
+									</dl>
+									<div class="shopClass_cot" >
+										<div class="shopClass_list">
+											<dl>
+												<dt><a href="#">上装</a></dt>
+												<dd><a href="#">短袖T恤</a><a href="#">短袖polo衫</a><a href="#">短袖衬衫</a><a href="#">长袖T恤</a><a href="#">长袖衬衫</a><a href="#">长袖POLO衫</a><a href="#">西服</a><a href="#">夹克</a><a href="#">卫衣</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">下装</a></dt>
+												<dd><a href="#">休闲裤</a><a href="#">西裤</a><a href="#">牛仔裤</a><a href="#"></a><a href="#">休闲短裤</a><a href="#">牛仔短裤</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">套装</a></dt>
+												<dd><a href="#">西服套装</a><a href="#">休闲服套装</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">配件</a></dt>
+												<dd><a href="#">男士皮带</a><a href="#">男士手表</a></dd>
+											</dl>								
+										</div>
+										<div class="shopClass_logo">
+											<a href="#"><img src="../img/goodlog18.jpg"/></a><a href="#"><img src="../img/goodlog19.jpg"/></a><a href="#"><img src="../img/goodlog20.jpg"/></a><a href="#"><img src="../img/goodlog21.jpg"/></a><a href="#"><img src="../img/goodlog22.jpg"/></a><a href="#"><img src="../img/goodlog23.jpg"/></a><a href="#"><img src="../img/goodlog24.jpg"/></a><a href="#"><img src="../img/goodlog25.jpg"/></a><a href="#"><img src="../img/goodlog26.jpg"/></a><a href="#"><img src="../img/goodlog27.jpg"/></a><a href="#"><img src="../img/goodlog28.jpg"/></a><a href="#"><img src="../img/goodlog29.jpg"/></a>
+										</div>
+									</div>				
+								</li>
+								<li>
+									<dl class="shopClass_yd">
+										<em></em>
+										<dt class="shopIcon"><a href="#">运动</a></dt>
+										<dd><a href="#">男运动服</a><a href="#">女运动服</a></dd>
+									</dl>
+									<div class="shopClass_cot" >
+										<div class="shopClass_list">
+											<dl>
+												<dt><a href="#">男士运动服</a></dt>
+												<dd><a href="#">卫衣/套头衫</a><a href="#">夹克/外套</a><a href="#">T恤</a><a href="#">风衣</a><a href="#">POLO衫</a><a href="#">长裤</a><a href="#">短裤</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">女士运动服</a></dt>
+												<dd><a href="#">卫衣/套头衫</a><a href="#">夹克/外套</a><a href="#">T恤</a><a href="#">风衣</a><a href="#">POLO衫</a><a href="#">长裤</a><a href="#">运动短裙</a><a href="#">短裤</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">男士运动鞋</a></dt>
+												<dd><a href="#">跑步鞋</a><a href="#">篮球鞋</a><<a href="#">综合训练鞋</a><a href="#">帆布鞋</a><a href="#">板鞋/休闲鞋</a><a href="#">凉鞋/拖鞋/洞洞鞋</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">女士运动鞋</a></dt>
+												<dd><a href="#">跑步鞋</a><a href="#">综合训练鞋</a><a href="#">帆布鞋</a><a href="#">板鞋/休闲鞋</a><a href="#">凉鞋/拖鞋/洞洞鞋</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">体育用品</a></dt>
+												<dd><a href="#">运动包</a><a href="#">篮球</a><a href="#">羽毛球拍</a><a href="#">运动护具</a><a href="#">健身器材</a><a href="#">其他大型器械</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">男士户外服</a></dt>
+												<dd><a href="#">冲锋衣裤</a><a href="#">速干衣裤</a><a href="#">抓绒衣裤</a><a href="#">卫衣/风衣</a><a href="#">户外休闲衣裤</a><a href="#">T恤/POLO衫</a><a href="#">短裤/长裤</a><a href="#">防晒服/皮肤衣衬衫</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">女士户外服</a></dt>
+												<dd><a href="#">冲锋衣裤</a><a href="#">速干衣裤</a><a href="#">卫衣/风衣</a><a href="#">户外休闲衣裤</a><a href="#">T恤/POLO衫</a><a href="#">短裤/长裤</a><a href="#">防晒服/皮肤衣</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">男士户外鞋</a></dt>
+												<dd><a href="#">登山鞋</a><a href="#">溯溪鞋</a><a href="#">越野鞋</a><a href="#">户外休闲鞋</a><a href="#">徒步鞋</a><a href="#">凉鞋/拖鞋/沙滩鞋</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">女士户外鞋</a></dt>
+												<dd><a href="#">登山鞋</a><a href="#">溯溪鞋</a><a href="#">越野鞋</a><a href="#">户外休闲鞋</a><a href="#">徒步鞋</a><a href="#">凉鞋/拖鞋/沙滩鞋</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">户外装备</a></dt>
+												<dd><a href="#">户外包</a><a href="#">睡袋</a><a href="#">帐蓬</a><a href="#">登山手杖</a><a href="#">防潮垫</a><a href="#">帽子</a><a href="#">折叠椅/床</a><a href="#">户外头巾</a><a href="#">烧烤炉</a></dd>
+											</dl>
+										</div>
+										<div class="shopClass_logo">
+											<a href="#"><img src="../img/goodlog30.jpg"/></a><a href="#"><img src="../img/goodlog31.jpg"/></a><a href="#"><img src="../img/goodlog32.jpg"/></a><a href="#"><img src="../img/goodlog33.jpg"/></a><a href="#"><img src="../img/goodlog34.jpg"/></a><a href="#"><img src="../img/goodlog35.jpg"/></a>
+										</div>
+									</div>	
+								</li>
+								<li>
+									<dl class="shopClass_xx">
+										<em></em>        
+										<dt class="shopIcon"><a href="#">鞋靴</a></dt>
+										<dd><a href="#">休闲鞋</a><a href="#">高跟鞋</a></dd>
+									</dl>									
+									<div class="shopClass_cot" >
+										<div class="shopClass_list">
+											<dl>
+												<dt><a href="#">精品女鞋</a></dt>
+												<dd><a href="#">高跟鞋</a><a href="#">单鞋</a><a href="#">日常休闲鞋</a><a href="#">靴子</a><a href="#">凉鞋/拖鞋</a><a href="#">粗跟单鞋</a><a href="#">户外运动鞋</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">精致男鞋</a></dt>
+												<dd><a href="#">正装鞋</a><a href="#">商务休闲鞋</a><a href="#">日常休闲鞋</a><a href="#">靴子</a><a href="#">凉鞋/拖鞋</a><a href="#">户外运动鞋</a></dd>
+											</dl>											
+										</div>
+										<div class="shopClass_logo">
+											<a href="#"><img src="../img/goodlog36.jpg"/></a><a href="#"><img src="../img/goodlog37.jpg"/></a><a href="#"><img src="../img/goodlog38.jpg"/></a><a href="#"><img src="../img/goodlog39.jpg"/></a><a href="#"><img src="../img/goodlog40.jpg"/></a><a href="#"><img src="../img/goodlog41.jpg"/></a><a href="#"><img src="../img/goodlog42.jpg"/></a><a href="#"><img src="../img/goodlog43.jpg"/></a><a href="#"><img src="../img/goodlog44.jpg"/></a><a href="#"><img src="../img/goodlog45.jpg"/></a><a href="#"><img src="../img/goodlog46.jpg"/></a><a href="#"><img src="../img/goodlog47.jpg"/></a>
+										</div>										
+									</div>	
+								</li>
+								<li>
+									<dl class="shopClass_xb">
+										<em></em>
+										<dt class="shopIcon"><a href="#">箱包</a></dt>
+										<dd><a href="#">男包</a><a href="#">女包</a><a href="#">手提包</a></dd>
+									</dl>
+									<div class="shopClass_cot" style="display: none;">
+										<div class="shopClass_list">
+											<dl>
+												<dt><a href="#">精品女包</a></dt>
+												<dd><a href="#">单肩包</a><a href="#">手提包</a><a href="#">斜挎包</a><a href="#">手拿包</a><a href="#">双肩包</a><a href="#">化妆包</a><a href="#">手提/斜挎多用包</a><a href="#">钱包</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">精致男包</a></dt>
+												<dd><a href="#">斜挎包</a><a href="#">手拿包</a><a href="#">双肩包</a><a href="#">手提/斜挎多用包</a><a href="#">钱包</a><a href="#">公文包</a><a href="#">腰包/胸包</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">功能箱包</a></dt>
+												<dd><a href="#">旅行包</a><a href="#">拉杆箱</a><a href="#">电脑包</a><a href="#">其它箱包</a></dd>
+											</dl>
+										</div>
+										<div class="shopClass_logo">
+											<a href="#"><img src="../img/48.jpg"/></a><a href="#"><img src="../img/49.jpg"/></a><a href="#"><img src="../img/50.jpg"/></a><a href="#"><img src="../img/51.jpg"/></a><a href="#"><img src="../img/52.jpg"/></a><a href="#"><img src="../img/53.jpg"/></a><a href="#"><img src="../img/54.jpg"/></a><a href="#"><img src="../img/55.jpg"/></a><a href="#"><img src="../img/56.jpg"/></a><a href="#"><img src="../img/57.jpg"/></a><a href="#"><img src="../img/58.jpg"/></a><a href="#"><img src="../img/59.jpg"/></a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<dl class="shopClass_ry">
+										<em></em>
+										<dt class="shopIcon"><a href="#">内衣</a></dt>
+										<dd><a href="#">文胸</a><a href="#">内裤</a><a href="#">睡衣</a></dd>
+									</dl>
+									<div class="shopClass_cot">
+										<div class="shopClass_list">
+											<dl>
+												<dt ><a href="#">女士内衣</a></dt>
+												<dd><a href="#">文胸</a><a href="#">三角内裤</a><a href="#">平角内裤</a><a href="#">保暖衣</a><a href="#">内衣套装</a><a href="#">塑身衣</a><a href="#">泳装</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">男士内衣</a></dt>
+												<dd><a href="#">三角内裤</a><a href="#">平角内裤</a><a href="#">背心</a><a href="#">保暖衣</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">家居睡衣</a></dt>
+												<dd><a href="#">男士家居服</a><a href="#">男士睡袍</a><a href="#">女士家居服</a><a href="#">女士睡袍</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">男士袜子</a></dt>
+												<dd><a href="#">长筒袜</a><a href="#">短筒袜</a><a href="#">中筒袜</a></dd>
+											</dl>											
+											<dl>
+												<dt><a href="#">女士袜子</a></dt>
+												<dd><a href="#">丝袜</a><a href="#">长筒袜</a><a href="#">短筒袜</a><a href="#">中筒袜</a><a href="#">美腿袜/裤袜</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">孕妇装/孕妇内衣</a></dt>
+												<dd><a href="#">孕妇裙</a><a href="#">孕妇上装</a><a href="#">孕妇下装</a><a href="#">防辐射服</a><a href="#">孕妇文胸</a><a href="#">孕妇内裤</a><a href="#">孕妇套装</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">泳装</a></dt>
+												<dd><a href="#">女士泳装</a><a href="#">男士泳装</a><a href="#">其他泳装</a></dd>
+											</dl>
+										</div>
+										<div class="shopClass_logo">
+											<a href="#"><img src="../img/60.jpg"/></a><a href="#"><img src="../img/61.jpg"/></a><a href="#"><img src="../img/62.jpg"/></a><a href="#"><img src="../img/63.jpg"/></a><a href="#"><img src="../img/64.jpg"/></a><a href="#"><img src="../img/65.jpg"/></a><a href="#"><img src="../img/66.jpg"/></a><a href="#"><img src="../img/67.jpg"/></a><a href="#"><img src="../img/68.png"/></a><a href="#"><img src="../img/69.jpg"/></a><a href="#"><img src="../img/70.jpg"/></a><a href="#"><img src="../img/71.jpg"/></a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<dl class="shopClass_yt">
+										<em></em>
+										<dt class="shopIcon"><a href="#">婴童</a></dt>
+										<dd><a href="#">童鞋</a><a href="#">宝宝用品</a></dd>
+									</dl>
+									<div class="shopClass_cot">
+										<div class="shopClass_list">
+											<dl>
+												<dt><a href="#">男童装</a></dt>
+												<dd><a href="#">T恤</a><a href="#">衬衫</a><a href="#">卫衣</a><a href="#">背心</a><a href="#">毛呢大衣</a><a href="#">羽绒服</a><a href="#">棉服</a><a href="#">针织衫/毛衫</a><a href="#">马甲</a><a href="#">外套</a><a href="#">裤子</a><a href="#">泳衣</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">女童装</a></dt>
+												<dd><a href="#">T恤</a><a href="#">衬衫</a><a href="#">卫衣</a><a href="#">背心</a><a href="#">毛呢大衣</a><a href="#">羽绒服</a><a href="#">棉服</a><a href="#">针织衫/毛衫</a><a href="#">马甲</a><a href="#">外套</a><a href="#">裤子</a><a href="#">泳衣</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">宝宝用品</a></dt>
+												<dd><a href="#">内衣</a><a href="#">套装</a><a href="#">孕婴用品</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">童鞋</a></dt>
+												<dd><a href="#">男童鞋</a><a href="#">女童鞋</a><a href="#">中性童鞋</a></dd>
+											</dl>											
+											<dl>
+												<dt><a href="#">儿童配饰</a></dt>
+												<dd><a href="#">学生书包</a><a href="#">帽子</a><a href="#">手套</a><a href="#">玩具</a><a href="#">安全座椅</a><a href="#">婴儿餐椅</a><a href="#">儿童雨具</a><a href="#">泳具</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">尿裤湿巾</a></dt>
+												<dd><a href="#">婴儿尿裤</a><a href="#">湿巾</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">亲子装</a></dt>
+												<dd><a href="#">母女装</a><a href="#">母子装</a><a href="#">父女装</a><a href="#">父子装</a><a href="#">家庭装</a></dd>
+											</dl>
+										</div>
+										<div class="shopClass_logo">
+											<a href="#"><img src="../img/72.jpg"/></a><a href="#"><img src="../img/73.jpg"/></a><a href="#"><img src="../img/74.jpg"/></a><a href="#"><img src="../img/75.jpg"/></a><a href="#"><img src="../img/76.jpg"/></a><a href="#"><img src="../img/77.jpg"/></a><a href="#"><img src="../img/78.jpg"/></a><a href="#"><img src="../img/79.jpg"/></a><a href="#"><img src="../img/80.jpg"/></a><a href="#"><img src="../img/81.jpg"/></a><a href="#"><img src="../img/82.jpg"/></a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<dl class="shopClass_jj">
+										<em></em>
+										<dt class="shopIcon"><a href="#">家居</a></dt>
+										<dd><a href="#">家纺</a><a href="#">生活用品</a></dd>
+									</dl>
+									<div class="shopClass_cot">										
+										<div class="shopClass_list">
+											<dl>
+												<dt><a href="#">居家日用</a></dt>
+												<dd><a href="#">储物收纳</a><a href="#">毛巾浴巾</a><a href="#">浴室整理</a><a href="#">洗晒熨烫</a><a href="#">防蚊驱虫</a><a href="#">居家创意</a><a href="#">雨伞雨具</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">厨房用品</a></dt>
+												<dd><a href="#">烹饪锅具</a><a href="#">餐桌器皿</a><a href="#">杯子水具</a><a href="#">茶具/咖啡具</a><a href="#">厨房配件</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">宝宝用品</a></dt>
+												<dd><a href="#">内衣</a><a href="#">套装</a><a href="#">孕婴用品</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">清洁用品</a></dt>
+												<dd><a href="#">纸品湿巾</a><a href="#">衣物清洁</a><a href="#">家务清洁</a></dd>
+											</dl>											
+											<dl>
+												<dt><a href="#">汽车配饰</a></dt>
+												<dd><a href="#">汽车装饰</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">床上用品</a></dt>
+												<dd><a href="#">套件</a><a href="#">被芯</a><a href="#">床单/被套</a><a href="#">枕芯/枕套</a><a href="#">毛绒布艺</a><a href="#">卧室家具</a><a href="#">凉席</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">生活家电</a></dt>
+												<dd><a href="#">电吹风</a><a href="#">电水壶</a><a href="#">电熨斗</a><a href="#">电压力锅</a><a href="#">搅拌/料理机</a><a href="#">毛球修剪器</a><a href="#">电磁炉</a><a href="#">电饭煲</a></dd>
+											</dl>
+										</div>
+										<div class="shopClass_logo">
+											<a href="#"><img src="../img/83.jpg"/></a><a href="#"><img src="../img/84.jpg"/></a><a href="#"><img src="../img/85.jpg"/></a><a href="#"><img src="../img/86.jpg"/></a><a href="#"><img src="../img/87.jpg"/></a><a href="#"><img src="../img/88.jpg"/></a><a href="#"><img src="../img/89.jpg"/></a><a href="#"><img src="../img/90.jpg"/></a><a href="#"><img src="../img/91.jpg"/></a><a href="#"><img src="../img/92.jpg"/></a><a href="#"><img src="../img/93.jpg"/><img src="../img/94.jpg"/></a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<dl class="shopClass_mz">
+										<em></em>
+										<dt class="shopIcon"><a href="#">美妆</a></dt>
+										<dd><a href="#">面膜</a><a href="#">洗护</a><a href="#">彩妆</a></dd>
+									</dl>
+									<div class="shopClass_cot">										
+										<div class="shopClass_list">
+											<dl>
+												<dt><a href="#">面部护肤</a></dt>
+												<dd><a href="#">洁面乳</a><a href="#">爽肤水/化妆水</a><a href="#">乳液/面霜</a><a href="#">面膜面贴</a><a href="#">精华露</a><a href="#">眼部护理</a><a href="#">唇部护理</a><a href="#">防晒护理</a><a href="#">男士护肤</a><a href="#">护肤套装</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">彩妆香水</a></dt>
+												<dd><a href="#">香水</a><a href="#">卸妆</a><a href="#">BB霜/隔离霜</a><a href="#">睫毛膏</a><a href="#">眼线眼影</a><a href="#">唇膏唇彩</a><a href="#">粉饼/粉底</a><a href="#">眉笔/眉粉</a><a href="#">腮红</a><a href="#">美甲</a><a href="#">彩妆工具</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">身体洗护</a></dt>
+												<dd><a href="#">洗发护发</a><a href="#">沐浴浴盐</a><a href="#">染发造型</a><a href="#">口腔护理</a><a href="#">手足护理</a><a href="#">卫生用品</a><a href="#">洗护套装</a></dd>
+											</dl>											
+										</div>
+										<div class="shopClass_logo">
+											<a href="#"><img src="../img/95.jpg"/></a><a href="#"><img src="../img/96.jpg"/></a><a href="#"><img src="../img/97.jpg"/></a><a href="#"><img src="../img/98.jpg"/></a><a href="#"><img src="../img/99.jpg"/></a><a href="#"><img src="../img/100.jpg"/></a><a href="#"><img src="../img/101.jpg"/></a><a href="#"><img src="../img/102.jpg"/></a><a href="#"><img src="../img/103.jpg"/></a><a href="#"><img src="../img/104.jpg"/></a><a href="#"><img src="../img/105.jpg"/><img src="../img/106.jpg"/></a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<dl id="kjh" class="shopClass_kjh">
+										<em></em>
+										<dt class="shopIcon"><a href="#">跨境汇</a></dt>
+										<dd><a href="#">进口美妆</a><a href="#">进口母婴</a></dd>
+									</dl>
+									<div class="shopClass_cot">										
+										<div class="shopClass_list">
+											<dl>
+												<dt><a href="#">进口母婴</a></dt>
+												<dd><a href="#">妈妈专区</a><a href="#">洗护用品</a><a href="#">尿裤湿巾</a><a href="#">营养辅食</a><a href="#">婴儿奶粉</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">进口美妆个护</a></dt>
+												<dd><a href="#">口腔护理</a><a href="#">香水彩妆</a><a href="#">女性护理</a><a href="#">身体护肤</a><a href="#">面部护肤</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">进口营养保健</a></dt>
+												<dd><a href="#">护理护具</a><a href="#">滋补养生</a><a href="#">营养健康</a><a href="#">医药保健</a><a href="#">家庭护理</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">进口食品</a></dt>
+												<dd><a href="#">进口冲调饮料/饮品</a><a href="#">进口饼干/糖果/休闲零食</a><a href="#">代用食品/方便食品</a><a href="#">进口咖啡/茶/牛奶</a><a href="#">进口粮油米面/土特产/调味品</a></dd>
+											</dl>
+											<dl>
+												<dt><a href="#">进口家居家装</a></dt>
+												<dd><a href="#">厨房用品</a><a href="#">生活日用</a><a href="#">其他</a><a href="#">厨房烹饪</a><a href="#">餐饮用具</a><a href="#">清洁日用</a><a href="#">收纳置物</a></dd>
+											</dl>	
+										</div>
+										<div class="shopClass_logo">
+											<a href="#"><img src="../img/107.jpg"/></a><a href="#"><img src="../img/108.jpg"/></a><a href="#"><img src="../img/109.jpg"/></a><a href="#"><img src="../img/110.jpg"/></a><a href="#"><img src="../img/111.jpg"/></a><a href="#"><img src="../img/112.jpg"/></a><a href="#"><img src="../img/113.jpg"/></a><a href="#"><img src="../img/114.jpg"/></a><a href="#"><img src="../img/115.jpg"/></a><a href="#"><img src="../img/116.jpg"/></a><a href="#"><img src="../img/117.jpg"/><img src="../img/118.jpg"/></a>
+										</div>
+									</div>
+								</li>
+							</ul>
+							
+						</div>
+						
+					</div>
+					<ul class="nav fl">
+						<li><a href="../index.html">首页</a></li>
+						<li><a href="#">奢侈品</a></li>
+						<li><a href="#">华盛商城</a></li>
+						<li><a href="#">品牌特卖</a></li>
+						<li><a href="#">跨境汇</a></li>
+					</ul>
+					<div class="shopcar fr">
+						<div class="cart">
+							<span></span>
+							<a class="shoptext" href="#">购物车</a>
+							(
+							<div class="shopNum">0</div>
+							)
+						</div>													
+						<div class="cartList">							
+							<span><img src="../img/core0.png"/></span>
+							<div>
+								<h3>购物车商品</h3>
+							</div>
+							<div class="cartGood">
+								购物车中还没有商品，赶紧选购吧！
+								<div class="carticon"></div>
+							</div>
+						</div>	
+					</div>									
+				</div>
+			</div>			
+		</div>
+		<!--banner-->
+		<div class="banner">
+			<!--轮播-->
+			<ul class="bPicv3">
+				<li><a href="#"><img src="../img/pic7.jpg"/></a></li>
+				<li><a href="#"><img src="../img/pic8.jpg"/></a></li>
+				<li><a href="#"><img src="../img/pic9.jpg"/></a></li>
+				<li><a href="#"><img src="../img/pic10.jpg"/></a></li>
+				<li><a href="#"><img src="../img/pic11.jpg"/></a></li>
+			</ul>
+			<!--轮播计算页数的列表-->
+			<ul class="tabNum">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<!--轮播按钮-->
+			<span class="prevv3"></span>
+			<span class="nextv3"></span>				
+		</div>					
+		
+		<!--热卖推荐-->		
+		<div class="proList">
+			<div class="proList_hot">
+				<div class="PL_a fl">
+					<ul>
+						<li style="margin-top: 30px;">热</li>
+						<li>门</li>
+						<li>推</li>
+						<li>荐</li>
+					</ul>
+				</div>
+				<div class="PL_b fl">
+					<ul>
+						<li>
+							<div class="PL_b_a ">								
+								<a href="#"><img src="../img/proPic1.jpg"/></a>
+							</div>
+							<div class="PL_b_b ">
+								<a href="#">北极绒 休闲弹力修身皮封袋口纯色男士休闲长裤 FLM5823</a>
+								<em>¥175.2</em>
+								<span>立即抢购</span>
+							</div>
+						</li>
+						<li>
+							<div class="PL_b_a ">								
+								<a href="#"><img src="../img/proPic1.jpg"/></a>
+							</div>
+							<div class="PL_b_b ">
+								<a href="#">北极绒 休闲弹力修身皮封袋口纯色男士休闲长裤 FLM5823</a>
+								<em>¥175.2</em>
+								<span>立即抢购</span>
+							</div>
+						</li>
+						<li>
+							<div class="PL_b_a ">								
+								<a href="#"><img src="../img/proPic1.jpg"/></a>
+							</div>
+							<div class="PL_b_b ">
+								<a href="#">北极绒 休闲弹力修身皮封袋口纯色男士休闲长裤 FLM5823</a>
+								<em>¥175.2</em>
+								<span>立即抢购</span>
+							</div>
+						</li>
+						<li>
+							<div class="PL_b_a ">								
+								<a href="#"><img src="../img/proPic1.jpg"/></a>
+							</div>
+							<div class="PL_b_b ">
+								<a href="#">北极绒 休闲弹力修身皮封袋口纯色男士休闲长裤 FLM5823</a>
+								<em>¥175.2</em>
+								<span>立即抢购</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--商品类目介绍-->
+		<div class="proSearch">
+			<p class="list_number">
+				<a href="#">全部结果 > （女装）</a>
+				<span>共405个商品</span>
+			</p>
+			<p class="proCheck">
+			已选条件：
+			</p>
+			<div class="serachType ">
+				<em>类&ensp;&ensp;目 :</em>
+				<span>
+					<a href="#">女士箱包</a>
+					<a href="#">休闲零食</a>
+					<a href="#">宝宝用品</a>
+					<a href="#">个人用品</a>
+					<a href="#">居家日用</a>
+					<a href="#">营养补充</a>
+					<a href="#">粮油生鲜水果</a>
+					<a href="#">服饰内衣</a>
+					<a href="#">鞋</a>
+					<a href="#">男士箱包</a>
+					<a href="#">童装童鞋</a>
+					<a href="#">护肤</a>
+					<a href="#">面膜</a>
+					<a href="#">洗护系列</a>
+					<a href="#">饮料</a>
+					<a href="#">彩妆</a>
+					<a href="#">香水/香氛</a>
+				</span>
+			</div>
+			<div class="listBrand">
+				<em>品&ensp;&ensp;牌:</em>
+				<span>
+					<a href="#">茵曼</a>
+					<a href="#">Bees do（蜂行）</a>
+					<a href="#">欧莎OSA</a>
+					<a href="#">OTHERMIX七格格</a>
+					<a href="#">背景色</a>
+					<a href="#">米莱达</a>
+					<a href="#">lavidione 拉维迪欧</a>
+					<a href="#">盛放</a>
+					<a href="#">伊芙丽</a>
+					<a href="#">初语</a>
+					<a href="#">沐羊MUYANG</a>
+				</span>			
+			</div>
+			<div class="listSort">
+				<a calss="listSort1" href="#" >最新<em class ='list_active'></em></a>
+				<a href="#">热门<em></em></a>
+				<a href="#">价格<em></em></a>
+			</div>
+		</div>
+		<!--商品列表-->
+		<div class="proDetail">
+			<ul class="prod_a">						
+			</ul>
+		</div>
+		<!--商品跳转页按钮-->
+		<div class="skipBtn">
+			<em>首页</em>
+			<em> < </em>
+			<em>1</em>
+			<em class="current_page">2</em>
+			<em>3</em>
+			<em>4</em>
+			<em>5</em>
+			<span>...</span>
+			<em> > </em>
+			<em>尾页</em>
+			<span>共八页</span>
+			<span>去第</span>
+			<input type="text" value="1" />
+			<b>GO</b>页
+		</div>
+		<!--服务Logo-->
+		<div class="call">
+			<div class="comWidth">
+				<ul class="call_content">
+					<li>
+						<span class="callPic_a"></span>
+						<div class="call_list">
+							<dl>
+								<dt>100%</dt>
+								<dd>全场正品保证</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="callPic_b"></span>
+						<div class="call_list">
+							<dl>
+								<dt>Mall</dt>
+								<dd>实付满58包邮</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="callPic_c"></span>
+						<div class="call_list">
+							<dl>
+								<dt>SALE</dt>
+								<dd>每天低价特卖</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="callPic_d"></span>
+						<div class="call_list">
+							<dl>
+								<dt>7Days</dt>
+								<dd>七天无理由换货</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<span class="callPic_e"></span>
+						<div class="call_list">
+							<dl>
+								<dt>全渠道</dt>
+								<dd>线上线下同步服务</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>			
+		</div>
+		<!--服务列表-->
+		<div class="ftHalp">
+			<div class="comWidth">
+				<div class="ftHalp_content">
+					<dl>
+						<dt>购物指南</dt>
+						<dd><a href="#">购物流程</a></dd>
+						<dd><a href="#">用户注册</a></dd>
+						<dd><a href="#">提交订单</a></dd>
+						<dd><a href="#">找回密码</a></dd>
+						<dd><a href="#">常见问题</a></dd>
+						<dd><a href="#">跨境汇需知</a></dd>
+					</dl>
+					<dl>
+						<dt>支付方式</dt>
+						<dd><a href="#">网银支付</a></dd>
+						<dd><a href="#">第三方支付</a></dd>
+						<dd><a href="#">支付常见问题</a></dd>
+					</dl>
+					<dl>
+						<dt>配送方式</dt>
+						<dd><a href="#">配送服务查询</a></dd>
+						<dd><a href="#">配送服务说明</a></dd>
+						<dd><a href="#">验货与签收</a></dd>
+						<dd><a href="#">包邮政策</a></dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd><a href="#">退换货政策</a></dd>
+						<dd><a href="#">退换货管理</a></dd>
+						<dd><a href="#">退换货说明</a></dd>
+						<dd><a href="#">退换货流程</a></dd>
+						<dd><a href="#">跨境汇售后服务</a></dd>
+					</dl>
+					<dl>
+						<dt>线下奥莱购购物中心</dt>
+						<dd><a href="#">深圳华盛奥特莱斯</a></dd>
+						<dd><a href="#">南宁华盛奥特莱斯</a></dd>
+						<dd><a href="#">南昌华盛奥特莱斯</a></dd>
+						<dd><a href="#">西安华盛奥特莱斯</a></dd>
+						<dd><a href="#">郑州华盛奥特莱斯</a></dd>
+						<dd><a href="#">哈尔滨华盛奥特莱斯</a></dd>
+					</dl>
+					<div class="ftHalp_a">
+						<ul>
+							<li class="ftHalp_wb"><a href="#"></a>
+								<span >官方微博</span>
+							</li>
+							<li class="ftHalp_yy"><a href="#"></a>
+								<span >官方应用</span>
+							</li>
+						</ul>
+						<div class="ftHalp_b">
+							<p>400 - 184 - 8866</p>
+							<i>周一至周日：09:00-21:00</i>
+						</div>
+						<div class="ftHalp_c">
+							<a href="#"><img src="../img/kfpic.png" alt="图片"/></a>
+						</div>
+					</div>
+				</div>				
+			</div>			
+		</div>
+		<!--荣誉证书-->
+		<div class="footer">
+			<div class="comWidth">
+				<div class="footer_a">
+					<a href="#">关于奥莱购</a>|<a href="#">联系我们</a>|<a href="#">华南城网</a>|<a href="#">华盛Outlets</a>
+				</div>
+				<div class="footer_b">
+					<p>Copyright &copy; 2013-2016 深圳华盛电子商务有限公司 粤ICP备16081451-1号 All Right </p>
+					<p>深圳市龙岗区平湖华南城1号交易广场4楼奥莱购（深圳华盛电子商务有限公司）</p>
+				</div>
+				<ul class="footer_c">
+					<li class="ftList1"><a href="#"></a></li>
+					<li class="ftList2"><a href="#"></a></li>
+					<li class="ftList3"><a href="#"></a></li>
+					<li class="ftList4"><a href="#"></a></li>
+					<li class="ftList5"><a href="#"></a></li>
+					<li class="ftList6"><a href="#"></a></li>
+					<li class="ftList7"><a href="#"></a></li>
+					<li class="ftList8"><a href="#"></a></li>
+				</ul>
+			</div>			
+		</div>
+		<div class="rightTab">
+			<!--侧边滑动栏-40宽的小列表-->
+			<div class="rightT1">
+				<div class="rightT1_1">
+					<ul class="rightTop">
+						<li class="Rtlogo">
+							<em class="AlgPic"></em>
+							<div class="AlgPic_a">
+								奥莱购购物
+								<i></i>
+							</div>
+						</li>
+						<li class="Rtlist">
+							<img src="../img/icon2.jpg" alt="图片"/>
+						</li>
+						<li class="Rtlist">
+							<em class="AlgPic1"></em>
+							<div class="AlgPic_b">
+								二维码
+								<i></i>
+							</div>
+						</li>
+						<li class="Rtlist">
+							<span class="rightT1_2">
+								<em class="AlgPic2"></em>
+								<p>购物车</p>
+								<b>0</b>
+							</span>							
+						</li>
+						<li class="Rtlist">		
+							<em class="rightT1_3"></em>
+							<div class="AlgPic_d">
+								优惠券
+								<i></i>
+							</div>
+						</li>
+					</ul>
+					<ul class="rightBot inna">
+						<li class="Rtlist">
+							<em class="AlgPic3"><img src="../img/hot-line.gif" alt="图片"/></em>
+							<div class="AlgPic_c">
+								在线客服
+								<i></i>
+							</div>
+						</li>
+						<li class="Rtlist">
+							<em class="AlgPic4"></em>				
+						</li>
+						<li class="Rtlist">
+							<em class="AlgPic5"></em>				
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--登录-->
+			<div class="rightT2" style="display: none;">
+				<ul>
+					<li><img src="../img/xb-tou.png" alt="图片"/></li>
+					<li>您好！华盛粉丝，您尚未登录</li>
+					<li>
+						<input type="text" name="username" class="Algvip" id="username"  placeholder="手机/邮箱"/>
+					</li>
+					<li>
+						<input type="password" name="password" class="Algpw" placeholder="请输入密码"/>
+					</li>
+					<li>
+						<input type="text" class="Algtxt" name="txt" id="txt" placeholder="请输入右边的计算结果"/>
+						<img class="Algtxt_btn" src="../img/validcode.gif" alt="图片"/>
+					</li>
+					<li>
+						<button class="AlgBtn">登 入</button>
+					</li>
+					<li>	
+						<a href="#" style="margin-right: 40px;">忘记密码？</a>	
+						<a href="#">立即注册>></a>									
+					</li>
+				</ul>
+			</div>
+			<!--广告-->
+			<div class="rightT3" style="display: none;">
+				<a href="#"><img src="../img/pic21.jpg" alt="图片"/></a>
+			</div>
+			<!--二维码-->
+			<div class="rightT4">
+				<div class="rightT4_1">
+					<ul>
+						<li class="RtIph">奥莱购客户端 手机专享价 >></li>
+						<li><img src="../img/phonepic.jpg" alt="图片"/></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

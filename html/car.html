@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" href="../css/common.css"/>
+		<link rel="stylesheet" href="../css/different.css" />
+		<link rel="stylesheet" href="../css/car.css" />
+		<script src="../js/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/aolaigo.js" ></script>
+		<script type="text/javascript" src="../js/shop.js" ></script>
+		<script type="text/javascript" src="../js/common.js" ></script>
+	</head>
+	<body>
+		<div class="LonHeader">
+			<div class="topBar">
+				<div class="comWidth">
+					<div class="leftArea">
+						<p>华盛奥特莱斯全渠道一体化零售平台</p>
+					</div>
+					<div class="rightArea">
+						<ul>
+							<li><a herf="#" class="log">登入</a></li>
+							<li><a herf="#" class="registration">免费注册</a></li>
+							<li><a herf="#" class="myAlg">我的奥莱购</a>
+								<ul>
+									<li><a herf="#" class="myOrder">我的订单</a></li>
+									<li><a herf="#" class="lcollection">我的收藏</a></li>
+									<li><a herf="#" class="coupons">我的优惠劵</a></li>
+									<li><a herf="#" class="goodCart">我的购物车</a></li>
+								</ul>
+							</li>
+							<li><a herf="#" class="phone">手机APP</a></li>
+							<li class="listLast"><a herf="#" class="help">帮助中心</a></li>
+						</ul>											
+					</div>
+				</div>
+			</div>	
+		</div>
+		<!-- 搜索框 -->
+		<div class="car_search">
+			<a href="javascript:void(0)">
+				<img src="../img/LOGO.jpg" alt="">
+				<span class = 'shopping_car' >购物车</span>
+			</a>
+			<div class="car_seach">
+				<form action="" class= 'car_from'>
+					<input type="text" placeholder="拉夏贝尔" id="keyword"/>
+					<input type="button" value="搜索"/>
+					<div class="datalist"></div>
+				</form>
+			</div>
+		</div>
+		<img src="../img/hdLogo.gif" alt="" class='move'>
+		<!-- 没有商品 -->
+		<div class="shopping_nothing" style="display:none">
+			<h2>购物车</h2>
+			<div class="content">
+					<img src="../img/car-b.png" alt="">
+					<p>购物车暂时没有商品,去<a href="#">首页</a>挑选喜欢的商品</p>
+			</div>
+		</div>
+		
+ 		<div class="shop_list">
+ 			
+ 		</div>
+		<!-- <div class="buy_shopping">
+			<h2>商品清单(2)</h2>
+			<div class="shoping_detail">
+				<ul class = 'shopping_item person_item1'>
+					<li>全选</li>
+					<li>订单商品</li>
+					<li>单价</li>
+					<li>数量</li>
+					<li>优惠</li>
+					<li>小计</li>
+					<li>操作</li>
+				</ul>
+				<ul class = 'shopping_item person_content'>
+					<li><input type="checkbox"></li>
+					<li>
+						<img src="../img/shop_pic1.jpg" alt="">
+						<div class="shopping_introduce">
+							<p><a href="#">FERRAGAMO/菲拉格慕  女款牛皮十字纹钱包22C114  0585065</a></p>
+							<p><span>浅灰色</span><span>棕色</span></p>
+						</div>
+					</li>
+					<li>￥3200.00</li>
+					<li>
+						<em>-</em><span>1</span><i>+</i>
+		
+					</li>
+					<li>
+						<p>¥5204.00</p>
+						<p>优惠促销∧</p>
+					</li>
+					<li>￥<em>7998.00</em></li>
+					<li>
+						<em>移入收藏夹</em>
+						<em>删除</em>
+					</li>
+				</ul>			
+			</div>
+		</div>
+		计算结果
+		<div class="result">
+			<ul class="choose">
+				<li><input type="checkbox"> </li>
+				<li>全选</li>
+				<li>删除</li>
+				<li>移入收藏夹</li>
+			</ul>
+			<ul class="calc">
+				<li><em >商品总额</em>	
+					<em  class = 'changeRed'>¥12800.00</em>	
+					<em> -  商品优惠：</em>	
+					<em class='changeOrange'>￥5204.00</em>	
+					<em> =  选购金额：</em>	
+					<em class = 'changeRed'>¥7596.00</em>	
+				</li>
+				<li>
+					<em class='changeOrange'>￥0.00</em>
+					<em>-  满减优惠：</em>
+				</li>
+			</ul>
+			<ul class="total_money">
+				<li>
+					<p>总计：<em>9495.00</em></p>
+					<p> 商品<em>&nbsp;5&nbsp;</em>件&nbsp;赠品<em>&nbsp;0&nbsp;</em>件</p>
+				</li>
+				<li><span>去结算</span></li>
+			</ul>
+		</div> -->
+		<!-- 热卖商品 -->
+		<div class="hot_sale">
+			<h2>热卖推荐</h2>
+			<div class="hot_content">
+				<dl>
+					<a href="javascript:void(0);">
+						<dt><img src="../img/car_pic1.jpg" alt=""></dt>
+						<dd>
+							<p>OTHERMIX七格格  秋新款纯色圆领甜美灯笼袖短裙收腰显瘦连衣裙  6MB3037Ns</p>
+							<p><em>￥249.8</em><span>￥1099</span></p>
+						</dd>
+					
+					</a>
+				</dl>
+
+				<dl>
+					<a href="javascript:void(0);">
+						<dt><img src="../img/car_pic2.jpg" alt=""></dt>
+						<dd>
+							<p>歌莉娅  时尚韩版单肩斜挎包 A2G1601475</p>
+							<p><em>¥228.00</em><span>¥498.00</span></p>
+						</dd>
+					
+					</a>
+				</dl>
+				<dl>
+					<a href="javascript:void(0);">
+						<dt><img src="../img/car_pic3.jpg" alt=""></dt>
+						<dd>
+							<p>Kiehl's/科颜氏 牛油果保湿眼霜</p>
+							<p><em>¥270.00</em><span>¥300.00</span></p>
+						</dd>
+					
+					</a>
+				</dl>
+				<dl>
+					<a href="javascript:void(0);">
+						<dt><img src="../img/car_pic4.jpg" alt=""></dt>
+						<dd>
+							<p>OTHERMIX七格格  秋新款纯色圆领甜美灯笼袖短裙收腰显瘦连衣裙  6MB3037Ns</p>
+							<p><em>￥249.8</em><span>￥1099</span></p>
+						</dd>
+					
+					</a>
+				</dl>
+				<dl>
+					<a href="javascript:void(0);">
+						<dt><img src="../img/car_pic5.jpg" alt=""></dt>
+						<dd>
+							<p>贝壳提亮液妆前乳30ml</p>
+							<p><em>¥108.00</em><span>¥142.00</span></p>
+						</dd>
+					
+					</a>
+				</dl>
+			</div>
+		</div>
+		<!-- 保证 -->
+		<div class= 'sure_bg'>
+			<ul class= 'sure_car'>
+				<li><a href=""><img src="../img/sure_pic1.png" alt=""></a></li>
+				<li><a href=""><img src="../img/sure_pic2.png" alt=""></a></li>
+				<li><a href=""><img src="../img/sure_pic3.png" alt=""></a></li>
+				<li><a href=""><img src="../img/sure_pic4.png" alt=""></a></li>
+				<li style="margin-right:0"><a href=""><img src="../img/sure_pic5.png" alt=""></a></li>
+			</ul>
+			
+		</div>
+		<!-- 底部 footrer -->
+		<div class="footer">
+			<div class="comWidth">
+				<div class="footer_a">
+					<a href="#">关于奥莱购</a>|<a href="#">联系我们</a>|<a href="#">华南城网</a>|<a href="#">华盛Outlets</a>
+				</div>
+				<div class="footer_b">
+					<p>Copyright &copy; 2013-2016 深圳华盛电子商务有限公司 粤ICP备16081451-1号 All Right </p>
+					<p>深圳市龙岗区平湖华南城1号交易广场4楼奥莱购（深圳华盛电子商务有限公司）</p>
+				</div>
+				<ul class="footer_c">
+					<li class="ftList1"><a href="#"></a></li>
+					<li class="ftList2"><a href="#"></a></li>
+					<li class="ftList3"><a href="#"></a></li>
+					<li class="ftList4"><a href="#"></a></li>
+					<li class="ftList5"><a href="#"></a></li>
+					<li class="ftList6"><a href="#"></a></li>
+					<li class="ftList7"><a href="#"></a></li>
+					<li class="ftList8"><a href="#"></a></li>
+				</ul>
+			</div>			
+		</div>
+	</body>
+</html>
